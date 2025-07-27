@@ -12,6 +12,32 @@
       position: relative;
       overflow-x: hidden;
     }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style {
+    transform-style: preserve-3d;
+  }
+
+  @keyframes slowspin {
+    0% {
+      transform: rotateY(-15deg) rotateX(10deg) scale(1);
+    }
+    50% {
+      transform: rotateY(15deg) rotateX(-10deg) scale(1.05);
+    }
+    100% {
+      transform: rotateY(-15deg) rotateX(10deg) scale(1);
+    }
+  }
+
+  .animate-slowspin {
+    animation: slowspin 12s ease-in-out infinite;
+  }
+
+
+
   </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-gray-700 text-white font-sans">
@@ -36,11 +62,13 @@
   </video>
 
   <!-- 🔺 Text Overlay (changes by screen size) -->
-  <div class="relative z-10 flex items-center justify-center h-full bg-black/40">
-    <!-- 👇 Heading for Mobile Devices -->
-    <h2 class="block md:hidden text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-400 drop-shadow-lg text-center px-4">
-      📱 Crafted for your palm-sized world
-    </h2>
+  <!-- 🔺 3D Text Overlay for Mobile Devices -->
+<div class="relative z-10 flex items-center justify-center h-full bg-black/40 perspective-1000">
+  <h2 class="block md:hidden text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-400 drop-shadow-2xl text-center px-6 animate-slowspin transform-style preserve-3d">
+    📱 Crafted for your palm-sized world
+  </h2>
+</div>
+
 
     <!-- 👇 Heading for Desktop/Laptop -->
     <h2 class="hidden md:block text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 drop-shadow-lg text-center px-4">
