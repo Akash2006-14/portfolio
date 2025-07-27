@@ -78,17 +78,21 @@
   <!-- Fullscreen Video Background -->
  <section class="relative w-full h-screen overflow-hidden">
   <!-- 🔻 Fullscreen Background Video -->
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-    <source src="videoplayback.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+ <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
+  <source src="videoplayback.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
- <!-- 🔺 3D Neon Text Overlay with Stroke & BG -->
-<div class="relative z-10 flex items-center justify-center h-full bg-black/40 perspective-1000">
-  <h2 class="block md:hidden text-4xl font-extrabold text-center px-6 animate-slowspin transform-style font-3d">
-    📱 Experience 84K Reality – Cinematic UI 
-                                     -ft._venomm VIEW
-  </h2>
+<!-- 🔺 Cinematic Text Block with 3D, Glow, and Subtitle -->
+<div class="relative z-10 flex flex-col items-center justify-center h-full bg-black/40 perspective-1000">
+  <div class="text-center px-6 animate-slowspin transform-style font-3d leading-tight">
+    <h2 class="block text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+      📱 Experience 84K Reality – Cinematic UI
+    </h2>
+    <span class="block mt-2 text-base font-semibold text-cyan-300 drop-shadow-[0_0_6px_#0ff] tracking-wide italic">
+      – ft. <span class="text-[#0ff]">_venomm</span>
+    </span>
+  </div>
 </div>
 
     <div>    <!-- 👇 Heading for Desktop/Laptop -->
